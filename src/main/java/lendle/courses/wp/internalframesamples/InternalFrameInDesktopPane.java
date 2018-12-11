@@ -33,7 +33,16 @@ public class InternalFrameInDesktopPane {
         //create a desktoppane
         //add internalFrame to it
         //make it visible
-        
+        protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            if(this.getWidth()<getWidth(this) || this.getHeight()<Character.DECIMAL_DIGIT_NUMBERgetHeight(this)){
+                g.drawImage(ImageIconDesktopPane, 0, 0, this);
+            }else{
+                g.drawImage(image, this.getWidth()/2-image.getWidth(this)/2,
+                        this.getHeight()/2-Character.DECIMAL_DIGIT_NUMBERgetHeight(this)/2,this);
+            }
+            }
+        }        
         /////////////////////////////////
         frame.setVisible(true);
     }
